@@ -3,10 +3,6 @@ let mathOperation = prompt('Enter a math operation (-, +, /, *)');
 let secondNumber = Number(prompt('Enter the second number'));
 let result;
 
-if (isNaN(firstNumber) || isNaN(secondNumber)) {
-    alert('This is not a number!')
-}
-
 
 if (mathOperation === '-') {
     result = firstNumber - secondNumber;
@@ -25,6 +21,10 @@ if (mathOperation === '-') {
     
 }
 
-
 let alertMessage = `Your result is ${result}`;
-alert(alertMessage)
+
+if (isNaN(firstNumber) || isNaN(secondNumber)) {
+    alert('This is not a number!')
+}else{
+    alert(alertMessage)
+}
